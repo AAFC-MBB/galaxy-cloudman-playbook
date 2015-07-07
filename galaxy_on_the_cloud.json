@@ -3,6 +3,7 @@
     "vnc_pwd": "{{env `CM_VNC_PWD`}}",
     "gftp_pwd": "{{env `CM_GALAXY_FTP_PWD`}}",
     "gadmin_pwd": "{{env `CM_GALAXY_ADMIN_PWD`}}",
+    "image_name": "Galaxy-CloudMan-{{timestamp}}",
     "os_source_image": "1b8fb912-a913-4588-8998-7f8ba950d937",
     "os_flavor": "3"
   },
@@ -37,7 +38,7 @@
     "source_image": "{{user `os_source_image`}}",
     "flavor": "{{user `os_flavor`}}",
     "image_name": "{{user `image_name`}}",
-    "security_groups": "default"
+    "security_groups": [ "default" ]
   }
   ],
   "provisioners": [
